@@ -1,0 +1,33 @@
+#repo creation and cloning
+
+git clone (https url of repo) - to colne repo from github 
+git init - to create a repo from local pc
+git pull - to update all files according to github repo
+git fetch - to download latest updates from github repo without merging and updating
+
+git remote origin -v -- gives connected repo
+
+
+#git stage and commit
+
+git status - to see staging and commmiting status
+
+git add (file name) or git add . - to stage all files
+git commit -m "Description of commit" - to commit with Description to github
+git push origin (branch name) - brnach to which changes should be saved
+
+git log - shows history of commits
+
+git reset (file name) - unstage file
+git reset --hard   - resets everthing to last commit
+git restore (file name) - undo unstaged changes 
+
+
+#branchs
+
+git branch - to see all branchs
+git checkout (branch name) - to visit a branch
+git checkout -b (branchname) - create a branch
+git branch -d (branch name) - to delete branch
+git diff (branch name) - to see diff between branch name with current branch
+git merge raj(already in main) - to merge raj with main
