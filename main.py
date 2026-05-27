@@ -84,12 +84,73 @@ import math
 
 #if /else
 
-age = int(input("Enter your age : "))
+# age = int(input("Enter your age : "))
 
-if age>18 :
-    print("An adult")
-elif age>20 and age<30 :
-    print("You are in your twenties")
-else:
-    print(" not an adult")
+# if age>18 :
+#     print("An adult")
+# elif age>20 and age<30 :
+#     print("You are in your twenties")
+# else:
+#    print(" not an adult")
+
+
+# or and not
+
+
+# temp = 60
+# is_sunny = False
+
+
+# if temp>= 50 and is_sunny :
+#     print("It is sunny and hot")
+
+# elif temp>= 50 and not is_sunny :
+#     print("It is sunny and cloudy")
+# else:
+#     print("It is cold")
+
+
+#ternary operators
+
+# num = 310
+# print("Even" if num % 2 == 0 else "Odd")
+
+# str = input("Enter string :")
+
+# print(f"Length of str : {len(str)}")
+
+# X = input("Enter character to find :")
+# print(f"Position of {X} : {str.find(X)}")
+# Y = input("Enter character to find from last:")
+# print(f"Position of {Y} : {str.rfind(Y)}")
+# print(f"Capitalized string: {str.capitalize()}")
+# print(f"Uppercase string: {str.upper()}")
+# print(f"Lowercase string: {str.lower()}")       
+# print(f"All Digits>? :{str.isdigit()}")
+
+
+# print(help(str))
+
+# str ="1234-5678-9012-3456"
+
+# # print(str[0:4])
+# print(str[::-1])
+
+
+# num1 = 12000000.21315
+# num2 = -160000.020
+# num3  = 12156516
+
+# print(f"Num1 :{num1:+,.2f}")
+# print(f"Num2 :{num2:+,}")
+# print(f"Num3 :{num3:+,}")
+
+# name = input("enter name:")
+
+# while name == " " or name == "" :
+#     print("Name cannot be empty")
+#     name = input("enter name again :")
+    
+# print(f"Name : {name}")
+
 

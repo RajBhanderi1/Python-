@@ -1,0 +1,35 @@
+
+
+or and not
+
+Ternary operator === X if condition else Y
+
+string operations
+
+len(str name)         === length of string
+str_name.find(X)      === find occurence postion of X in str_name gives index from front
+str_name.rfind(X)     === find occurence postion of X from last  i str_name gives index form reverse
+
+str_name.capatilize  === will capatilize first letter
+str_name.lower/upper === will convert  all in lower/ upper case
+str.name.isdigit     === will return True if all are digit else false
+
+str_name.isalpha     === trye if all alphabet no space
+.count("X")          === count X in string
+.relace("X", "Y")    === replaces X with Y
+
+
+string index uses
+str_name[start : end :Step]  === step -1 meeans reverse traverse
+
+format specifiers
+
+{name:X}
+
+X = + ^(centre) 10(space) <(num on left) >(num on right)
+    , for large numbers
+    .2f upto 2 decimal digits
+
+
+
+
