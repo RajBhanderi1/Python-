@@ -1,4 +1,6 @@
 import math
+import time
+
 
 #print("Hello world")
 #p# Variables
@@ -152,5 +154,28 @@ import math
 #     name = input("enter name again :")
     
 # print(f"Name : {name}")
+
+
+# for x in range (1,11) :
+#     print (x)
+    
+# print("hello")
+    
+    
+# for x in reversed(range(1,12,2)) :
+#     print (x)
+
+fruits =("apple", "banana", "cherry", "date", "elderberry")
+# print(fruits)
+# # fruits.append("hello")
+# print(fruits)
+# fruits.insert(1,"hi")
+# print(fruits)
+# fruits.remove(fruits[1])
+# print(fruits)
+# fruits.sort()
+# fruits.reverse()
+# fruits.pop("apple")
+# print(fruits)
 
 

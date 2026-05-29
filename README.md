@@ -31,3 +31,9 @@
 - build compound interest cal. using while loop
 - temp converter
 - input validation 
+
+# **28th & 29th May**
+
+- timer using loops
+-  priniting rectangle using nested loops
+- food cart problem
