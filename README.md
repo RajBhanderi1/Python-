@@ -37,3 +37,10 @@
 - timer using loops
 -  priniting rectangle using nested loops
 - food cart problem
+
+
+# **1st June**
+
+- num guessing game
+- Menu cart using dictionaries
+- quiz game

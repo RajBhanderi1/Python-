@@ -1,5 +1,7 @@
 import math
 import time
+import random
+
 # area calculator
 length = float(input("Enter the length : "))
 width = float(input("Enter the width  : "))
@@ -187,3 +189,158 @@ while True:
 print(foods)
 print(prices)
 print(f"Total price : {total:0.2f}")
+
+
+# numpad
+
+num_pad = (("1","2","3"),("4","5","6"),("7","8","9"),("#","0","*"))
+
+for x in num_pad :
+    for y in x :
+        print(y,end= " ")
+    print()
+
+# quiz game
+
+
+questions = (
+    ("What is the capital of India?"),
+    ("Which planet is known as the Red Planet?"),
+    ("What is 5 * 6?"),
+    ("Which language is primarily used for AI and Data Science?"),
+    ("Who wrote 'Romeo and Juliet'?")
+)
+
+options = (
+    ("A. Mumbai", "B. Delhi", "C. Kolkata", "D. Chennai"),
+    ("A. Venus", "B. Mars", "C. Jupiter", "D. Saturn"),
+    ("A. 25", "B. 35", "C. 30", "D. 40"),
+    ("A. Java", "B. C++", "C. Python", "D. HTML"),
+    ("A. Charles Dickens", "B. William Shakespeare", "C. Mark Twain", "D. J.K. Rowling")
+)
+
+answers = (
+    "B",
+    "B",
+    "C",
+    "C",
+    "B"
+)
+guess = []
+count = 0
+
+opt = ["A","B","C","D"]
+for x in range(len(questions)):
+    print(questions[x])
+    for y in options[x]:
+        print(y, end="\n")
+    
+    print()
+    
+    guess_temp= input("enter your guess (A/B/C/D):").upper()
+
+    while True:
+        if guess_temp not in opt or guess_temp =="" or guess_temp == "0" :
+            guess_temp= input("enter your guess again (A/B/C/D):").upper()
+        else :
+            break
+    print()
+    guess.append(guess_temp)
+
+for x in range(5):
+     if guess[x] == answers[x]:
+        count += 1
+    
+
+print(f"Your Answers : {guess}")
+print(f"Correct Answers :{answers}")
+print(f"Out of which number of correct answers : {count} ")
+
+
+# Menu cart using dictionaries
+
+
+menu = {
+    "Burger": 120,
+    "Pizza": 250,
+    "Pasta": 180,
+    "Sandwich": 90,
+    "French Fries": 80,
+    "Coke": 40,
+    "Coffee": 60,
+    "Ice Cream": 70,
+    "Biryani": 220,
+    "Salad": 100
+}
+print("MENU :")
+for key , value in menu.items():
+    
+    print(f"{key:<14} : {value: >8.2f}")
+cart = []
+total = 0
+
+while True :
+    
+    cart_temp = input("Enter items to add to cart (press Q to quit) : ").title()
+    
+    if cart_temp== "Q":
+        break    
+    while cart_temp not in menu or cart_temp=="" or cart_temp == "0" :
+            cart_temp = input("Enter items to add to cart again: ").title()
+            if cart_temp == "Q":
+                break
+    if cart_temp == "Q":
+        break
+    cart.append(cart_temp)    
+    
+for item in cart:
+     
+    print(item)
+    total += float(menu[item])
+    
+print(f"Total of cart :{total}")
+
+
+
+
+# num guessing game
+low = 0
+high = 100
+count = 0
+
+num = random.randint(low,high)
+
+guess = input("Enter your guess between 0 to 100(including 0 & 100) :")
+while True :
+    if guess.isdigit():
+        
+        while True :
+            guess = int(guess)
+            if guess < low or guess > high :
+                guess = input("Please enter a valid number only in range 0 to 100 : ")
+                
+
+            elif guess < num :
+                guess = input(f"{guess} is too low, try bigger number again : ")
+                count += 1
+            
+            elif guess > num :
+                guess =input(f"{guess} is too big try smaller number again : ")
+                count += 1
+                
+
+            elif guess == num :
+                print("Congrats your guessed number is correct")
+                count += 1
+                break
+
+            else :
+                input("Please enter a valid number only : ")
+        
+
+
+        print(f"You guessed correct number in {count} times")
+        break
+    else :
+        print("Enter digits only")
+        guess = input("Enter your guess between 0 to 100(including 0 & 100) :")
