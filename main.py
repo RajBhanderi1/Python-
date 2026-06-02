@@ -2,6 +2,7 @@ import math
 import time
 import random
 
+
 #print("Hello world")
 #p# Variables
 
@@ -223,45 +224,119 @@ import random
 # num = random.shuffle(opt)
 # print(opt)
 
-# num guessing game
-low = 0
-high = 100
-count = 0
+# dice_art = {
+#                 1: """
+#             ┌───────┐
+#             │       │
+#             │   ●   │
+#             │       │
+#             └───────┘
+#             """,
 
-num = random.randint(low,high)
+#                 2: """
+#             ┌───────┐
+#             │ ●     │
+#             │       │
+#             │     ● │
+#             └───────┘
+#             """,
 
-guess = input("Enter your guess between 0 to 100(including 0 & 100) :")
-while True :
-    if guess.isdigit():
-        
-        while True :
-            guess = int(guess)
-            if guess < low or guess > high :
-                guess = input("Please enter a valid number only in range 0 to 100 : ")
-                
+#                 3: """
+#             ┌───────┐
+#             │ ●     │
+#             │   ●   │
+#             │     ● │
+#             └───────┘
+#             """,
 
-            elif guess < num :
-                guess = input(f"{guess} is too low, try bigger number again : ")
-                count += 1
-            
-            elif guess > num :
-                guess =input(f"{guess} is too big try smaller number again : ")
-                count += 1
-                
+#                 4: """
+#             ┌───────┐
+#             │ ●   ● │
+#             │       │
+#             │ ●   ● │
+#             └───────┘
+#             """,
 
-            elif guess == num :
-                print("Congrats your guessed number is correct")
-                count += 1
-                break
+#                 5: """
+#             ┌───────┐
+#             │ ●   ● │
+#             │   ●   │
+#             │ ●   ● │
+#             └───────┘
+#             """,
 
-            else :
-                input("Please enter a valid number only : ")
-        
+#                 6: """
+#             ┌───────┐
+#             │ ●   ● │
+#             │ ●   ● │
+#             │ ●   ● │
+#             └───────┘
+#             """
+# }
+
+# roll = random.randint(1,6)
+# # for roll in dice_art:
+# print(dice_art[roll])
 
 
-        print(f"You guessed correct number in {count} times")
-        break
-    else :
-        print("Enter digits only")
-        guess = input("Enter your guess between 0 to 100(including 0 & 100) :")
+# def invoice(username,amount = 0 ,date= "20"):
+#     print(f"Username: {username} Amount: {amount} Date: {date}")
+#     # print(f"Amount: {amount}")
+#     # print(f"Date: {date}")
+
+
+# invoice(amount = 1000,username = "raj",date = 20)
+
+# # def add(x,y):
+# #     z = x + y
+# #     return z
+
+# x = int(input("Enter x : "))
+# y = int(input("Enter y : "))
+# print(add(x,y))
+
+
+
+# def shipping_label(*args,**kwargs):
+#     for arg in args:
+#         print(arg,end=" ")
+#     print()
+#     # for value in kwargs.values() :
+#     #     print(value,end=" ")
+#     # print()
+#     if 'apt' in kwargs.keys() and 'area' in kwargs.keys():
+#         print(f"{kwargs.get('area')} {kwargs.get('apt')},")
+#     elif 'apt' not in kwargs.keys():
+#         print(f"{kwargs.get('area')},")
+#     elif 'area' not in kwargs.keys():
+#         print(f"{kwargs.get('apt')},")
+    
+#     if 'state' in kwargs.keys() and  'country' in kwargs.keys():
+#         print(f"{kwargs.get('country')} {kwargs.get('state')},")
+#     elif 'state' not in kwargs.keys():
+#         print(f"{kwargs.get('country')},")
+#     elif 'country' not in kwargs.keys():
+#         print(f"{kwargs.get('state')},")
+    
+#     if 'pincode' in kwargs.keys():
+#         print(f"{kwargs.get('pincode')}.")
+
+
+
+# shipping_label("raj","bhanderi",area ="park", apt ="xyz",state = "guj",
+#                country ="india",pincode ="123456"
+#                )
+
+
+# fruits =["apple","pineapple","strawberry","grape"]
+
+# fruit2 =[fruit[0] for fruit in fruits]
+
+# print(fruit2)
+
+
+# print(help(eg))
+
+# print(eg.cube(10))
+# print(__name__ )
 
