@@ -340,3 +340,32 @@ import random
 # print(eg.cube(10))
 # print(__name__ )
 
+# #Slot Machine
+
+# def spin_row():
+#     symbols =['😀','😁','🚀','💰']
+#     result = []
+#     # random.choice(symbols)
+#     result =[random.choice(symbols) for x in range(3)]
+#     print(" ".join(result))
+#     # for x in result:
+#     #     print(x)
+#     if result == ['💰','💰','💰']:
+#         print("You won")
+
+
+
+# def main():
+#     spin_row()
+
+# if __name__ == '__main__':
+#     main()
+
+# from class_car import car
+
+        
+# car1 = car("toyota", "black",2,200000)
+
+# car1.drive()
+# car1.stop()
+
