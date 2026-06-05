@@ -369,3 +369,290 @@ import random
 # car1.drive()
 # car1.stop()
 
+# class animals:
+#     def __init__(self,name):
+#         self.name= name
+        
+    
+#     def eat(self):
+#         print(f"{self.name} can eat")
+#     def run(self):
+#         print(f"{self.name} can run")
+# class humans(animals):
+#     def human(self):
+#         print("I am human")
+
+
+# class loyalty(humans):
+
+#     def loyalty_level(self):
+#         print(f"Level is 10")
+
+
+
+# x = loyalty()
+
+# x.loyalty_level()
+# x.human()
+# x.eat()
+# x.run()
+
+# class shape:
+#     def __init__(self,color,is_filled):
+#         self.color = color
+#         self.is_filled = is_filled
+          
+# class circle(shape):
+#     def __init__(self,color,is_filled,radius):
+    
+#         super().__init__(color,is_filled)
+#         self.radius = radius
+# class square(shape):
+#         def __init__(self,color,is_filled,length):
+#             super().__init__(color,is_filled)
+#             self.length = length
+            
+# class triangle(shape):
+#     def __init__(self,color,is_filled,width,height):
+
+#             super().__init__(color,is_filled)
+#             self.width = width
+#             self.height = height
+
+
+# s1 = circle("red",True,10)
+
+# print(s1.color)
+# print(s1.is_filled)
+# print(s1.radius)
+
+# class Animal:
+
+#     def __init__(self, name):
+#         self.name = name
+
+
+# class Dog(Animal):
+
+#     def __init__(self, name, breed):
+#         super().__init__(name)
+#         self.breed = breed
+
+
+# dog1 =Dog("bull","german")
+
+
+# print(dog1.name)
+# print(dog1.breed)
+
+
+# class books :
+#     def __init__(self,name,author,pages):
+#         self.name = name
+#         self.author = author
+#         self.pages = pages
+        
+#     def __str__(self):
+#         return f"{self.name} : {self.author}"
+    
+#     def __eq__(self,other):
+#         return self.name == other.name and self.author == other.author
+    
+#     def __gt__(self, other):
+#         return self.pages > other.pages
+    
+#     def __add__(self, other):
+#         return self.pages + other.pages
+    
+#     def __sub__(self, other):
+#         return self.pages - other.pages
+    
+#     def __contains__(self, keyword):
+#         return keyword in self.name or keyword in self.author
+#     def __getitem__(self, key):
+       
+#         if key == "name":
+#             return self.name
+       
+#         elif key == "author" :
+#             return self.author
+#         elif key == "pages" :
+#             return self.pages
+#         else:
+#             print("Invalid")
+        
+# book1 = books("The Hobbit","J.R.R. Tolkien",310)
+# book2 = books("Harry Potter and the Philosopher's Stone","J.K. Rowling",252)
+
+
+# print(book1['name'])
+
+# class rectangle:
+#     def __init__(self,width,height):
+#         self._width = width
+#         self._height =height
+
+#     @property
+#     def width(self):
+#         return f"{self._width:.1f}"
+#     @property
+#     def height(self):
+#         return f"{self._height:.1f}"
+    
+#     @width.setter
+#     def width(self,new_width):
+#         if new_width > 0:
+#             self._width = new_width
+#         else:
+#             print("not a valid width")
+
+
+#     @height.setter
+#     def height(self,new_height):
+#         if new_height > 0:
+#             self._height = new_height
+#         else:
+#             print("not a valid height")
+
+#     @width.deleter
+#     def width(self):
+#         del self._width
+#         print("width has been deleted")
+
+#     @height.deleter
+#     def height(self):
+#         del self._height
+#         print("height has been deleted")
+
+# rec1 =rectangle(2,3)
+
+# del rec1.width
+# # print(rec1.width)
+# print(rec1.height)
+
+
+# def add_sprinkles(func):
+#     def wrapper(*args,**kwargs):
+#         print("you got sprinkles")
+#         func(*args,**kwargs)
+#     return wrapper
+
+# def add_fudge(func):
+#     def wrapper(*args,**kwargs):
+#         print("you got fudge")
+#         func(*args,**kwargs)
+#     return wrapper
+
+# @add_sprinkles
+# @add_fudge
+# def get_ice_cream(flavor):
+
+#     print(f"You got an {flavor} ice cream")
+
+# get_ice_cream(flavor="vanilla")
+
+
+#try except finally
+
+# try:
+#     num = int(input("Enter num to divide 1 by :"))
+#     div =(1/num)
+  
+# except Exception:
+#     print("enter number only")
+# finally:
+#       print("finnaly printed")
+# # except ZeroDivisionError:
+# #     print("dont enter 0")
+
+
+#file handling
+# import os
+# file_path = "/home/arccus/Desktop/raj.txt"
+
+# if os.path.exists(file_path):
+#     print("File exists") 
+#     if os.path.isfile(file_path):
+#         print("Its a file")
+#     elif os.path.isdir(file_path):
+#         print("Its a folder")
+
+# else :
+#     print("Doesnt exists")
+
+# import csv
+# import os
+# import json
+
+# employees = [
+#                 ["Name","age","Height"],
+#                 ["hi","hello","bye"],
+#                 ["a","b","c"]
+#             ]
+# # # file_data = "Hello this is the file's first line"
+# # file_data = {"name": "Spongebob", "job": "Fry Cook",
+# #                 "age": "Patrick", "jonb": "None"}
+            
+
+# file_path ="/home/arccus/Desktop/rajfolder/output.json"
+# try :
+
+#     with  open(file_path,"w") as file :
+   
+#     #     # this for plain files::
+
+#     #     # file.write(file_data)
+#     #     # print("data written")  
+
+#     #     # this for json files::
+   
+#             # json.dump(file_data,file,indent= 4)  
+
+#         writer = csv.writer(file)
+#         for row in employees:
+#             writer.writerow(row)
+    
+#     if os.path.exists(file_path):
+#         with open(file_path,"r") as file:
+#             content = csv.reader(file)
+#             for line in content:
+#                 print(line[0],line[1])
+        
+#     else :
+#        print("Create file first")
+        
+# except FileExistsError:
+#     print("files exists change the name of file ")
+# except FileNotFoundError:
+#    print("File not found")
+
+# except PermissionError:
+#    print("You dont have permission")
+
+
+
+# import datetime
+
+# today = datetime.date.today()
+# now = datetime.datetime.now()
+
+# date = datetime.datetime(2025,12,10)
+# # print(date)
+# time = datetime.time(12,20,10)
+# # print(time)
+
+# # now = now.strftime("%H:%M:%S ; %d:%m:%Y")
+
+# # target_date = datetime.datetime.
+
+# #   print(now)
+# if now < date:
+#     print("you have time")
+# elif now> date:
+#     print("Your time is over")
+
+# else:
+#     print("Right on time") 
+
+
+

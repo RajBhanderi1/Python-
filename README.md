@@ -52,3 +52,13 @@
 # **3rd June**
 
 - Encrytion and Decryption program
+
+# **4th June**
+
+- learned about Inheritance,polymorphism,methods,properties,decorators,etc(OOP)
+
+# **5th June**
+
+- completed file handling
+- datetime library
+- 24-hour format alram clock with complete error handling and input validation
