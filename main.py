@@ -759,37 +759,161 @@ import random
 #     # sys.exit()
 # if __name__ == "__main__":
 #     main()
+
+        # label.setStyleSheet("color : #fccf03;"
+        #                     "background-color : blue;"
+        #                     "font-style : italic;"
+        #                     "font-weight : Bold;"
+        #                     "text-decoration : underline;")
+        
+
+
+# import os
+# os.environ["QT_QPA_PLATFORM"] = "wayland"
+
+# import sys
+# from PyQt5.QtWidgets import (QApplication,QMainWindow,QLabel,
+#                             QVBoxLayout,QHBoxLayout,QGridLayout,QWidget)
+# from PyQt5.QtGui import QIcon ,QFont, QPixmap
+
+# from PyQt5.QtCore import Qt
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setWindowTitle("Hey")
+        
+#         self.setGeometry(0, 0, 600, 600)
+#         self.setWindowIcon(QIcon("Screenshot From 2026-06-11 15-57-38.png"))
+
+#         # label = QLabel("Hello Bye",self)
+#         # label.setFont(QFont("Times new ROman",25))
+#         # label.setGeometry(0,0,500, 500)
+#         # label.setStyleSheet("color : Blue;"
+#                             # "Background-color : Yellow")
+#         # label.setAlignment(Qt.AlignRight)
+
+#         # label = QLabel(self)
+#         # label.setGeometry(0, 0, 500, 500)
+#         # pixmap_t =QPixmap("/home/arccus/Python/Screenshot From 2026-06-11 15-57-38.png")
+#         # label.setPixmap(pixmap_t)
+#         # label.setScaledContents(True)
+#         # label.setGeometry((self.width() - label.width())//2, (self.height() - label.height())//2, label.width(), label.height())
+        
+
+        
+# def main():
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.show()
+
+#     sys.exit(app.exec_())
+
+# if __name__ == "__main__" :
+#     main()
+
+
+
+# import os
+# os.environ["QT_QPA_PLATFORM"] = "wayland"
+
+# import sys
+# from PyQt5.QtWidgets import (QApplication,QMainWindow,QLabel,
+#                             QVBoxLayout,QHBoxLayout,QGridLayout,QWidget)
+# from PyQt5.QtGui import QIcon ,QFont, QPixmap
+
+# from PyQt5.QtCore import Qt
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setWindowTitle("Hey")
+        
+#         self.setGeometry(0, 0, 600, 600)
+#         self.setWindowIcon(QIcon("Screenshot From 2026-06-11 15-57-38.png"))
+#         self.initUI()
+
+#     def initUI(self):
+#         central_widget = QWidget()
+#         self.setCentralWidget(central_widget)
+
+#         label1 = QLabel("1",self)
+#         label2 = QLabel("2",self)
+#         label3 = QLabel("3",self)
+#         label4 = QLabel("4",self)
+#         label5 = QLabel("5",self)
+
+#         label1.setStyleSheet("background-color : blue;")
+#         label2.setStyleSheet("background-color : green;")
+#         label3.setStyleSheet("background-color : yellow;")
+#         label4.setStyleSheet("background-color : purple;")
+#         label5.setStyleSheet("background-color : orange;")
+
+#         vbox =QVBoxLayout()
+#         vbox.addWidget(label1)
+#         vbox.addWidget(label2)
+#         vbox.addWidget(label3)
+#         vbox.addWidget(label4)
+#         vbox.addWidget(label5)
+        
+#         central_widget.setLayout(vbox)
+
+    
+        
+# def main():
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.show()
+
+#     sys.exit(app.exec_())
+
+# if __name__ == "__main__" :
+#     main()
+
+
 import os
 os.environ["QT_QPA_PLATFORM"] = "wayland"
 
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow,QLabel
-from PyQt5.QtGui import QIcon,QFont
+from PyQt5.QtWidgets import (QApplication,QMainWindow, QLabel, QPushButton , QWidget)
+from PyQt5.QtGui import QIcon ,QFont, QPixmap
+
 from PyQt5.QtCore import Qt
+
 class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Hey")
-        self.resize(400,400)
-        self.setWindowIcon(QIcon("/home/arccus/Python/Python-/Screenshot From 2026-06-10 10-32-06.png"))
-        label = QLabel("Hello",self)
-        # label2 =QLabel("Bye",self)
-        label.setFont(QFont("Times New Roman",25))
-        label.setGeometry(0,0,400,400)
-        label.setStyleSheet("color : #fccf03;"
-                            "background-color : blue;"
-                            "font-style : italic;"
-                            "font-weight : Bold;"
-                            "text-decoration : underline;")
-        
-        label.setAlignment(Qt.AlignCenter)
-        
+       
+        self.setWindowTitle("Hey") 
+        self.setGeometry(0, 0, 600, 600)
+        self.setWindowIcon(QIcon("Screenshot From 2026-06-11 15-57-38.png"))
+        self.label = QLabel("Hello before clicking button",self)
+
+        self.initUI()
+
+    def initUI(self):
+
+        self.button = QPushButton("Click Me",self)
+        self.button.setGeometry(200,200,100,60)
+        self.button.setStyleSheet("font-size: 20px")
+        self.button.clicked.connect(self.on_click)
+
+        self.label.setGeometry(210, 210,200,200)
+
+    def on_click(self):
+        self.label.setText("Goodbye after clicking button")
+        self.button.setText("Clicked!")        
+        print("Button Clicked")
+
+
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
+
     sys.exit(app.exec_())
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
     main()
+
