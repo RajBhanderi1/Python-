@@ -654,5 +654,142 @@ import random
 # else:
 #     print("Right on time") 
 
+# import pygame
+# import time 
+# import datetime
+
+# def alarm_time_f(alarm_time):
+#     print(f"Alarm set for {alarm_time}.")
+    
+
+#     running = True
+#     while running :
+#         current_time = datetime.datetime.now().strftime("%H:%M:%S")
+#         print(current_time)
+#         time.sleep(1)
+
+#         if current_time == alarm_time:
+#             print("Wake up")
+#             running =False
 
 
+
+
+
+# def main():
+#     alarm_time = input("Enter time:")
+#     alarm_time_f(alarm_time)
+
+# if __name__ == "__main__":
+#     main()
+# import threading
+
+# def walk_dog(x,y,z):
+#     time.sleep(10)
+#     print(f"walking {x} {y} {z} completed")
+
+# def get_mail():
+#     time.sleep(3)
+#     print("got mail")
+
+# def throw_trash():
+#     time.sleep(6)
+#     print("Throwed trash")
+
+# chore1 = threading.Thread(target=walk_dog,args =(target = "doo","doo","doo"))
+# chore1.start()
+
+# chore2 = threading.Thread(target=get_mail)
+# chore2.start()
+
+# chore3 = threading.Thread(target=throw_trash)
+# chore3.start()
+
+# chore1.join()
+# chore2.join()
+# chore3.join()
+
+# print("done")
+
+# import requests
+
+# def get_pokemon_info(name):
+#     base_url = "https://pokeapi.co/api/v2/"
+#     url = f"{base_url}pokemon/{name}"
+#     response = requests.get(url)
+
+#     if response.status_code  == 200:
+#         pokemon_data = response.json()
+
+#         return pokemon_data
+    
+#     else:
+#          print(f"Data not retrieved\nError : {response.status_code}")   
+# def main():
+#         pokemon_name = "typhlosion"
+#         pokemon_info = get_pokemon_info(pokemon_name)
+#         if pokemon_info:
+#             print(f"Name: {pokemon_info["name"].capitalize()}")
+#             print(f"Height: {pokemon_info["height"]}")
+#             print(f"Weight: {pokemon_info["weight"]}")
+
+# if __name__ == "__main__":
+#     main()
+
+
+# import os
+# os.environ["QT_QPA_PLATFORM"] = "wayland"
+
+# import sys
+# from PyQt5.QtWidgets import QApplication,QMainWindow
+
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+    
+# def main():
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.show() 
+#     print("opened screen")
+    
+#     print(app.exec_())
+#     # print("opened screen")
+#     # sys.exit()
+# if __name__ == "__main__":
+#     main()
+import os
+os.environ["QT_QPA_PLATFORM"] = "wayland"
+
+import sys
+from PyQt5.QtWidgets import QApplication,QMainWindow,QLabel
+from PyQt5.QtGui import QIcon,QFont
+from PyQt5.QtCore import Qt
+class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Hey")
+        self.resize(400,400)
+        self.setWindowIcon(QIcon("/home/arccus/Python/Python-/Screenshot From 2026-06-10 10-32-06.png"))
+        label = QLabel("Hello",self)
+        # label2 =QLabel("Bye",self)
+        label.setFont(QFont("Times New Roman",25))
+        label.setGeometry(0,0,400,400)
+        label.setStyleSheet("color : #fccf03;"
+                            "background-color : blue;"
+                            "font-style : italic;"
+                            "font-weight : Bold;"
+                            "text-decoration : underline;")
+        
+        label.setAlignment(Qt.AlignCenter)
+        
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()

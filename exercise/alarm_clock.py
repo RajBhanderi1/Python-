@@ -11,7 +11,7 @@ def input_validation(prompt,min,max):
                     print(f"Enter between {min} to {max} only")   
             
 
-def alram_time(h,m,s):
+def alarm_time(h,m,s):
          
     target_time = datetime.time(h,m,s)
     # now_target_time = target_time.strftime("%H:%M:%S")
@@ -35,7 +35,7 @@ def alram_time(h,m,s):
             else :
                 break
     else:
-        print("Set alram for future time only stupid")
+        print("Set alarm for future time only stupid")
     
     
 
@@ -43,17 +43,17 @@ def alram_time(h,m,s):
 def main():
     while True:
         try :
-            h = input_validation("Please tell for what time you want to set alram h in 0 to 23:",0,23)
-            m = input_validation("Please tell for what time you want to set alram m in 0 to 59:",0,59)            
-            s = input_validation("Please tell for what time you want to set alram s in 0 to 59:",0,59)
-            alram_time(h,m,s)
+            h = input_validation("Please tell for what time you want to set alarm h in 0 to 23:",0,23)
+            m = input_validation("Please tell for what time you want to set alarm m in 0 to 59:",0,59)            
+            s = input_validation("Please tell for what time you want to set alarm s in 0 to 59:",0,59)
+            alarm_time(h,m,s)
         except ValueError:
             print("Only numbers are valid")
             continue    
         quit_now = False
         
         while True:
-            permission = input("You want to continue setting alram or quit? (c to continue q to quit):").lower()
+            permission = input("You want to continue setting alarm or quit? (c to continue q to quit):").lower()
             if permission == "c":
                 break
             elif permission == "q":
