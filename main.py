@@ -831,6 +831,18 @@ import random
         
 #         self.setGeometry(0, 0, 600, 600)
 #         self.setWindowIcon(QIcon("Screenshot From 2026-06-11 15-57-38.png"))
+#         self.label = QLabel("Hello before clicking button",self)
+          # self.checkbox =QCheckBox("Show Check Box Here",self)
+          # self.label = QLabel("Checkbox is not checked yet", self)
+        # self.radio1 =QRadioButton("Option 1",self)
+        # self.radio2 =QRadioButton("Option 2",self)
+        # self.radio3 =QRadioButton("Option 3",self)
+        # self.radio4 =QRadioButton("Option 4",self)
+        # self.radio5 =QRadioButton("Option 5",self)
+        # self.button_group1 = QButtonGroup(self)
+        # self.button_group2 = QButtonGroup(self)
+
+
 #         self.initUI()
 
 #     def initUI(self):
@@ -856,9 +868,66 @@ import random
 #         vbox.addWidget(label4)
 #         vbox.addWidget(label5)
         
-#         central_widget.setLayout(vbox)
+    #     central_widget.setLayout(vbox)
+    #     self.button = QPushButton("Click Me",self)
+    #     self.button.setGeometry(100,100,100,60)
+    #     self.button.setStyleSheet("font-size: 20px")
+    #     self.button.clicked.connect(self.on_click)
 
-    
+    #     self.label.setGeometry(110, 110,200,200)
+    #     self.label.setStyleSheet("color : red;")
+
+    # def on_click(self):
+    #     self.label.setText("Goodbye after clicking button")
+    #     self.button.setText("Clicked!")        
+    #     print("Button Clicked")
+    #     self.button.setEnabled(False)
+
+    #     self.checkbox .setGeometry(0,10,250,50)
+
+    #     self.checkbox.setStyleSheet("font-size: 20px;"
+    #                                 "background-color : red;")
+    #     self.checkbox.setChecked(False)
+    #     self.checkbox.stateChanged.connect(self.on_checkbox_clicked)
+
+    #     self.label.setGeometry(0,50,150,80)
+
+    # def on_checkbox_clicked(self,state):
+    #     if state == Qt.Checked:
+    #         print("Box Checked")
+    #     else : 
+    #         print("Box got unchecked")
+    #     self.label.setText("Checkbox checked")
+        
+    #     self.radio1.setGeometry(0,0,100,30)
+    #     self.radio2.setGeometry(0,30,100,30)
+    #     self.radio3.setGeometry(0,60,100,30)
+    #     self.radio4.setGeometry(0,90,100,30)
+    #     self.radio5.setGeometry(0,120,100,30)
+
+    #     self.setStyleSheet("QRadioButton{" 
+    #                        "font-size: 16px;"
+    #                        "background-color : lightgray}")
+        
+    #     self.button_group1.addButton(self.radio1)
+    #     self.button_group1.addButton(self.radio2)
+    #     self.button_group1.addButton(self.radio3)
+       
+    #     self.button_group2.addButton(self.radio4)
+    #     self.button_group2.addButton(self.radio5)
+
+    #     self.radio1.toggled.connect(self.on_radio_clicked)
+    #     self.radio2.toggled.connect(self.on_radio_clicked)
+    #     self.radio3.toggled.connect(self.on_radio_clicked)
+    #     self.radio4.toggled.connect(self.on_radio_clicked)
+    #     self.radio5.toggled.connect(self.on_radio_clicked)
+
+    # def on_radio_clicked(self):
+    #     radio_button = self.sender()
+    #     if radio_button.isChecked():
+    #         print(f"{radio_button.text()} is selected")
+        
+
         
 # def main():
 #     app = QApplication(sys.argv)
@@ -871,11 +940,12 @@ import random
 #     main()
 
 
-import os
-os.environ["QT_QPA_PLATFORM"] = "wayland"
+# import os
+# os.environ["QT_QPA_PLATFORM"] = "wayland"
 
 import sys
-from PyQt5.QtWidgets import (QApplication,QMainWindow, QLabel, QPushButton , QWidget)
+from PyQt5.QtWidgets import (QApplication,QMainWindow, QLabel, QPushButton , QWidget, QCheckBox, QRadioButton,
+                             QButtonGroup, QLineEdit,QHBoxLayout)
 from PyQt5.QtGui import QIcon ,QFont, QPixmap
 
 from PyQt5.QtCore import Qt
@@ -886,25 +956,64 @@ class MainWindow(QMainWindow):
         super().__init__()
        
         self.setWindowTitle("Hey") 
-        self.setGeometry(0, 0, 600, 600)
-        self.setWindowIcon(QIcon("Screenshot From 2026-06-11 15-57-38.png"))
-        self.label = QLabel("Hello before clicking button",self)
+        self.setGeometry(500, 100, 400, 400)
+        self.button1 =QPushButton("1",self)
+        self.button2 =QPushButton("2",self)
+        self.button3 =QPushButton("3",self)
 
         self.initUI()
+        
 
     def initUI(self):
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
 
-        self.button = QPushButton("Click Me",self)
-        self.button.setGeometry(200,200,100,60)
-        self.button.setStyleSheet("font-size: 20px")
-        self.button.clicked.connect(self.on_click)
+        hbox = QHBoxLayout()
 
-        self.label.setGeometry(210, 210,200,200)
+        hbox.addWidget(self.button1)
+        hbox.addWidget(self.button2)
+        hbox.addWidget(self.button3)
 
-    def on_click(self):
-        self.label.setText("Goodbye after clicking button")
-        self.button.setText("Clicked!")        
-        print("Button Clicked")
+        central_widget.setLayout(hbox)
+
+
+        self.button1.setObjectName("button1")
+        self.button2.setObjectName("button2")
+        self.button3.setObjectName("button3")
+
+        self.setStyleSheet("""
+                QPushButton{
+                            font-size: 50px;
+                           background-color : red; 
+                           padding: 0px 50px ;
+                           margin : 25px;
+                           border-radius : 10px;
+                           border: 5px solid green;
+                            }
+                QPushButton#button1{
+                           background-color : hsl(217, 90%, 61%);
+                           }
+                QPushButton#button2{
+                           background-color : hsl(129, 90%, 61%);
+                           }
+                QPushButton#button3{
+                           background-color : hsl(55, 89%, 54%);
+                           }
+                            
+                           
+                QPushButton#button1:hover{
+                           background-color : hsl(217, 90%, 80%);
+                           }
+                QPushButton#button2:hover{
+                           background-color : hsl(129, 90%, 80%);
+                           }
+                QPushButton#button3:hover{
+                           background-color : hsl(55, 89%, 80%);
+                           }
+                            """ )
+
+
+    
 
 
 def main():
